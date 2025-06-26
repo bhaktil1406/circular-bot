@@ -1,3 +1,7 @@
 streamlit
-requests
 feedparser
+requests
+beautifulsoup4
+selenium
+webdriver-manager
+PyPDF2
