@@ -15,7 +15,7 @@ NSE_FEED = "https://nsearchives.nseindia.com/content/RSS/Circulars.xml"
 SEBI_FEED = "https://www.sebi.gov.in/sebirss.xml"
 BSE_FEED = "https://www.bseindia.com/data/xml/notices.xml"
 KEYWORDS = [
-    "MOCK", "ALGO", "colocation","colo","otr","Revision","Futures",
+    "MOCK", "ALGO", "colocation","colo","otr","Revision","Futures","Quantity",
     "ip","Monitoring", "userid", "Connectivity", "Messages","audit","Expiry","Derivatives",
     "timeline","penalty","Investor","software"
 ]
