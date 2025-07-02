@@ -24,6 +24,7 @@ MCX_FEEDS = [
     "https://www.mcxindia.com/en/rssfeed/circulars/membership-and-compliance",
     "https://www.mcxindia.com/en/rssfeed/circulars/ctcl",
     "https://www.mcxindia.com/en/rssfeed/circulars/legal",
+    "https://www.mcxindia.com/en/rssfeed/circulars/tech",
     "https://www.mcxindia.com/en/rssfeed/circulars/t-s"
 ]
 IGNORE_DEPARTMENTS = ["SLBS", "CD", "NMF", "CML", "DS", "IPO"]
