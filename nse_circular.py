@@ -20,7 +20,6 @@ KEYWORDS = [
     "timeline","Penalty","Investor","software","sebi","Technology"
 ]
 MCX_FEEDS = [
-    "https://www.mcxindia.com/en/rssfeed/circulars/general",
     "https://www.mcxindia.com/en/rssfeed/circulars/membership-and-compliance",
     "https://www.mcxindia.com/en/rssfeed/circulars/ctcl",
     "https://www.mcxindia.com/en/rssfeed/circulars/legal",
