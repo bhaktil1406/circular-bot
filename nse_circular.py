@@ -17,7 +17,7 @@ BSE_FEED = "https://www.bseindia.com/data/xml/notices.xml"
 KEYWORDS = [
     "MOCK", "ALGO", "colocation","colo","otr","Revision","Futures","Quantity","BEFS",
     "ip","Monitoring", "userid", "Connectivity", "Messages","audit","Expiry","Derivatives",
-    "timeline","Penalty","Investor","software","sebi","Technology","Market"
+    "timeline","Penalty","Investor","software","sebi","session","trading","Technology","Market"
 ]
 MCX_FEEDS = [
     "https://www.mcxindia.com/en/rssfeed/circulars/membership-and-compliance",
