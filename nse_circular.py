@@ -14,12 +14,13 @@ HEADERS = {
 NSE_FEED = "https://nsearchives.nseindia.com/content/RSS/Circulars.xml"
 SEBI_FEED = "https://www.sebi.gov.in/sebirss.xml"
 BSE_FEED = "https://www.bseindia.com/data/xml/notices.xml"
+MCX_FEEDS = "https://www.mcxindia.com/en/rssfeed/circulars/tech"
 KEYWORDS = [
     "MOCK", "ALGO", "colocation","colo","otr","Revision","Futures","Quantity","BEFS",
     "ip","Monitoring", "userid", "Connectivity", "Messages","audit","Expiry","Derivatives",
     "timeline","Penalty","Investor","software","sebi","session","Muhurat","Technology","Market"
 ]
-MCX_FEEDS = [
+MCxX_FEEDS = [
     "https://www.mcxindia.com/en/rssfeed/circulars/membership-and-compliance",
     "https://www.mcxindia.com/en/rssfeed/circulars/ctcl",
     "https://www.mcxindia.com/en/rssfeed/circulars/legal",
