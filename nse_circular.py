@@ -123,11 +123,11 @@ def display_bse():
 # === MCX Tab ===
 def display_mcx():
     st.subheader("MCX Circulars")
-    found = False
+    # found = False
 
-    for feed_url in MCX_FEEDS:
-        # Extract department from URL, e.g., "general" from ".../circulars/general"
-        department = feed_url.strip("/").split("/")[-1].replace("-", " ").title()
+    # for feed_url in MCX_FEEDS:
+    #     # Extract department from URL, e.g., "general" from ".../circulars/general"
+    #     department = feed_url.strip("/").split("/")[-1].replace("-", " ").title()
 
         try:
             response = requests.get(feed_url, headers=HEADERS)
