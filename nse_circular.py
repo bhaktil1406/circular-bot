@@ -129,24 +129,24 @@ def display_mcx():
     #     # Extract department from URL, e.g., "general" from ".../circulars/general"
     #     department = feed_url.strip("/").split("/")[-1].replace("-", " ").title()
 
-        try:
-            response = requests.get(feed_url, headers=HEADERS)
-            feed = feedparser.parse(response.text)
+    try:
+        response = requests.get(feed_url, headers=HEADERS)
+        feed = feedparser.parse(response.text)
 
-            for entry in feed.entries:
-                title = entry.title
-                link = entry.link
+        for entry in feed.entries:
+            title = entry.title
+            link = entry.link
 
-                if keyword_match(title):
-                    found = True
-                    st.markdown(f"{title}")
-                    st.markdown(f"[Read Circular]({link})")
-                    st.markdown(f"Published: {entry.get('published', 'N/A')}")
-                    st.markdown(f"Department: `{department}`")
-                    st.markdown("---")
+            if keyword_match(title):
+                found = True
+                st.markdown(f"{title}")
+                st.markdown(f"[Read Circular]({link})")
+                st.markdown(f"Published: {entry.get('published', 'N/A')}")
+                st.markdown(f"Department: `{department}`")
+                st.markdown("---")
 
-        except Exception as e:
-            st.error(f"Failed to load MCX feed: {feed_url} — {e}")
+    except Exception as e:
+        st.error(f"Failed to load MCX feed: {feed_url} — {e}")
 
     if not found:
         st.info("No relevant MCX circulars found.")
