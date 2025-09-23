@@ -14,13 +14,12 @@ HEADERS = {
 NSE_FEED = "https://nsearchives.nseindia.com/content/RSS/Circulars.xml"
 SEBI_FEED = "https://www.sebi.gov.in/sebirss.xml"
 BSE_FEED = "https://www.bseindia.com/data/xml/notices.xml"
-MCX_FEEDS = "https://www.mcxindia.com/en/rssfeed/circulars/tech"
 KEYWORDS = [
     "MOCK", "ALGO", "colocation","colo","otr","Revision","Futures","Quantity","BEFS",
     "ip","Monitoring", "userid", "Connectivity", "Messages","audit","Expiry","Derivatives",
     "timeline","Penalty","Investor","software","sebi","session","Muhurat","Technology","Market"
 ]
-MCxX_FEEDS = [
+MCX_FEEDS = [
     "https://www.mcxindia.com/en/rssfeed/circulars/membership-and-compliance",
     "https://www.mcxindia.com/en/rssfeed/circulars/ctcl",
     "https://www.mcxindia.com/en/rssfeed/circulars/legal",
@@ -123,30 +122,30 @@ def display_bse():
 # === MCX Tab ===
 def display_mcx():
     st.subheader("MCX Circulars")
-    # found = False
+    found = False
 
-    # for feed_url in MCX_FEEDS:
-    #     # Extract department from URL, e.g., "general" from ".../circulars/general"
-    #     department = feed_url.strip("/").split("/")[-1].replace("-", " ").title()
+    for feed_url in MCX_FEEDS:
+        # Extract department from URL, e.g., "general" from ".../circulars/general"
+        department = feed_url.strip("/").split("/")[-1].replace("-", " ").title()
 
-    try:
-        response = requests.get(feed_url, headers=HEADERS)
-        feed = feedparser.parse(response.text)
+        try:
+            response = requests.get(feed_url, headers=HEADERS)
+            feed = feedparser.parse(response.text)
 
-        for entry in feed.entries:
-            title = entry.title
-            link = entry.link
+            for entry in feed.entries:
+                title = entry.title
+                link = entry.link
 
-            if keyword_match(title):
-                found = True
-                st.markdown(f"{title}")
-                st.markdown(f"[Read Circular]({link})")
-                st.markdown(f"Published: {entry.get('published', 'N/A')}")
-                st.markdown(f"Department: `{department}`")
-                st.markdown("---")
+                if keyword_match(title):
+                    found = True
+                    st.markdown(f"{title}")
+                    st.markdown(f"[Read Circular]({link})")
+                    st.markdown(f"Published: {entry.get('published', 'N/A')}")
+                    st.markdown(f"Department: `{department}`")
+                    st.markdown("---")
 
-    except Exception as e:
-        st.error(f"Failed to load MCX feed: {feed_url} — {e}")
+        except Exception as e:
+            st.error(f"Failed to load MCX feed: {feed_url} — {e}")
 
     if not found:
         st.info("No relevant MCX circulars found.")
