@@ -16,7 +16,7 @@ SEBI_FEED = "https://www.sebi.gov.in/sebirss.xml"
 BSE_FEED = "https://www.bseindia.com/data/xml/notices.xml"
 KEYWORDS = [
     "MOCK", "ALGO", "colocation","colo","otr","Revision","Futures","Quantity","BEFS",
-    "ip","Monitoring", "userid", "Connectivity", "Messages","audit","Expiry","Derivatives",
+    "ip","Monitoring", "userid", "Connectivity", "Messages","audit","Expiry","Derivatives","Indices",
     "timeline","Penalty","Investor","software","sebi","session","Muhurat","Technology","Market"
 ]
 MCX_FEEDS = [
